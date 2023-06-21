@@ -11,7 +11,7 @@ typedef struct student
 } Student;
 
 void inputData( Student** );
-void printStuArr( Student** );
+void printStuArr( const Student** );
 
 int size = 0;
 
@@ -38,7 +38,7 @@ void inputData( Student* pArr[] )
         p = malloc( sizeof( Student ) );
 
         printf( ">  " );
-        n = scanf( "%d %s %d %d %d", &p->no, p->name, &p->kor, &p->math, p->eng );
+        n = scanf( "%d %s %d %d %d", &p->no, p->name, &p->kor, &p->math, &p->eng );
 
         if( n != 5 )
         {

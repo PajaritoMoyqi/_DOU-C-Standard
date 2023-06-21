@@ -12,8 +12,8 @@ typedef struct student
 
 Student inputStuInfo( void );
 Student* inputStuInfo2( void );
-void printStudent( Student s );
-void printStudent2( Student* s );
+void printStudent( Student );
+void printStudent2( Student* );
 
 int main( void )
 {
@@ -54,7 +54,7 @@ void printStudent( Student s )
     printf( "%2d %10s %3d %3d %3d %3d %5.2f\n", s.no, s.name, s.kor, s.math, s.eng, s.total, s.average );
 }
 
-void printStudent( Student* p )
+void printStudent2( Student* p )
 {
     p->total = p->kor + p->math + p->eng;
     p->average = p->total / 3.0f;
